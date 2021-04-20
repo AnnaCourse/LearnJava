@@ -14,7 +14,7 @@ public class HomeWork19 {
     public static LocalDateTime[] createDates(String inputDate, DateTimeFormatter formatter) {
         LocalDateTime[] result = new LocalDateTime[3];
         try {
-            result[0] = LocalDateTime.parse(inputDate, formatter);
+            result[0] = convertStringToLocalDateTime(inputDate,formatter);
         } catch (Exception ex) {
             throw new RuntimeException("Cannot parse input date: " + inputDate,ex);
         }
