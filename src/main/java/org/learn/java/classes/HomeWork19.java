@@ -53,5 +53,10 @@ public class HomeWork19 {
         return dtf;
     }
 
+    public static LocalDateTime convertStringToLocalDateTime(String inputDate, DateTimeFormatter formatter) {
+        return LocalDateTime.parse(inputDate,formatter);
+    }
+
+
 
 }

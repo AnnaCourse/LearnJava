@@ -1,5 +1,6 @@
 package org.learn.java.classes;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
+import java.util.Date;
 import java.util.Locale;
 
 public class HomeWork19Tests {
@@ -33,5 +35,14 @@ public class HomeWork19Tests {
         LocalDateTime[] date4 = HomeWork19.createDates("2000-05-25 01:10:12",forthFormat);
         Duration duration4 = HomeWork19.getPeriod(date4[1],date4[2]);
 
+    }
+
+    @Test
+    public void convertDatesTest() {
+        String date1 = "2021-02-28 00:01:02";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime result = HomeWork19.convertStringToLocalDateTime(date1,formatter);
+        LocalDateTime expected = LocalDateTime.of(2021,02,28,0,1,2);
+        Assertions.assertEquals(expected,result);
     }
 }
