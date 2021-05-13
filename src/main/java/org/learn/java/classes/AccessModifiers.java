@@ -1,6 +1,7 @@
 package org.learn.java.classes;
 
 public class AccessModifiers {
+    //
     public static  String statPubVar;
     protected static String statProtVar;
     private static String statPrivVar;
